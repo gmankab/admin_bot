@@ -1,0 +1,39 @@
+[project]
+dependencies = [
+    'tgcrypto-pyrofork',
+    'pyrofork',
+    'rich',
+]
+name = 'tg_admin_bot'
+version = '24.0.3'
+description = 'gmanka tg admin bot'
+readme = 'readme.md'
+requires-python = '>=3.11'
+classifiers = [
+    'License :: OSI Approved :: GNU Affero General Public License v3',
+]
+
+[project.urls]
+repo = 'https://github.com/gmankab/tg_admin_bot'
+
+[project.optional-dependencies]
+tests = [
+    'pyright',
+    'ruff',
+]
+build = [
+    'setuptools',
+    'twine',
+    'build',
+]
+
+[project.scripts]
+tg_admin_bot = 'tg_admin_bot.__main__:main'
+
+[tool.pyright]
+venvPath = '.'
+venv = '.venv'
+
+[tool.setuptools.packages.find]
+where = ['.']
+
